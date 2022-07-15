@@ -49,7 +49,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
 
-streamlit.stop()
+
 
 #import snowflake.connector
 streamlit.header("The fruit load list contains:")
@@ -67,3 +67,4 @@ Addmyfruit = streamlit.text_input('What fruit would you like to add','Kiwi')
 streamlit.write('Thanks for adding ', Addmyfruit)
 my_cur.execute("insert into fruit_load_list values('from streamlit')")
 
+streamlit.stop()
